@@ -1,0 +1,39 @@
+using System;
+using System.Globalization;
+
+namespace SystemGlobalizatoin
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string dt = "06 | 04 | 2012";
+
+            DateTime date = DateTime.ParseExact(dt, "dd | MM | yyyy", CultureInfo.InvariantCulture);
+
+            Console.WriteLine(dt.ToString());
+
+            try
+            {
+                string CurrentDate = "06 | 04 | 2012";
+
+                DateTime currentDate = DateTime.ParseExact(CurrentDate, "dd | MM | yyyy", CultureInfo.CurrentCulture);
+
+
+            }
+
+
+            catch(Exception ex)
+            {
+                Console.WriteLine("Error ocurred" + ex.Message);
+            }
+
+           
+            
+        }
+    }
+
+
+}
+
+
